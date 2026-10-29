@@ -1,0 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  color: #1e2329;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 428px;
+  min-height: 926px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 95px;
+}
+
+/* Header */
+.header {
+  height: 96px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 16px;
+}
+
+.header h1 {
+      font-size: 19px;
+    font-weight: 700;
+    color: #111;
+    /* margin-top: 10px; */
+    position: absolute;
+    top: 37px;
+}
+
+.icon-back {
+ position: absolute;
+    left: -10px;
+    bottom: 18px;
+    width: 77px;
+    height: 63px;
+    object-fit: contain;
+}
+
+.header-icons {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  display: flex;
+  gap: 18px;
+}
+
+.icon-help,
+.icon-history {
+width: 130px;
+    height: 100px;
+    /* margin-left: -7px; */
+    object-fit: contain;
+    position: relative;
+    left: 38px;
+    top: 13px;
+}
+
+/* Notice */
+.notice {
+  margin: 0 16px;
+  min-height: 54px;
+  background: #fffbea;
+  border-radius: 13px;
+  padding: 11px 13px;
+  display: grid;
+  grid-template-columns: 18px 1fr 18px;
+  column-gap: 2px;
+  align-items: start;
+}
+
+.notice-icon {
+      width: 15px;
+    height: 15px;
+    border: 1.5px solid #111;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: -1px;
+    margin-left: -1px;
+
+}
+
+.notice p {
+  font-size: 12px;
+  line-height: 1.38;
+  color: #1e2329;
+  letter-spacing: -0.1px;
+}
+
+.notice b {
+  color: #d59b00;
+  font-weight: 600;
+}
+
+.notice-close {
+    color: #9aa0a8;
+    font-size: 26px;
+    line-height: 0.8;
+    font-weight: 300;
+    margin-top: -2px;
+        margin-left: 7px;
+}
+.more-detail{
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  color: #8f959e;
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.detail-arrow{
+  font-size: 11px;
+  color: #8f959e;
+  margin-top: 2px;
+  font-weight: 500;
+}
+/* QR */
+.qr-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.qr-box {
+  position: relative;
+  width: 184px;
+  height: 184px;
+}
+
+.qr-img {
+    width: 450px;
+    height: 368px;
+    object-fit: contain;
+    display: block;
+    margin-left: -120px;
+    margin-top: -108px;
+}
+
+.qr-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* Info */
+.info-section {
+  margin-top: 32px;
+  padding: 0 16px;
+}
+
+.network-block {
+  position: relative;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.label {
+  font-size: 14px;
+  color: #787981;
+  font-weight: 400;
+}
+
+.network-name {
+  margin-top: 18px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #111;
+}
+
+.network-sub {
+  margin-top: 8px;
+  font-size: 13px;
+  color:#787981;
+}
+
+.contract {
+margin-top: 14px;
+    font-size: 13px;
+    color: #787981;
+}
+
+.switch-btn {
+  position: absolute;
+  right: 0;
+  top: 42px;
+  width: 38px;
+    height: 38px;
+
+  border: none;
+  border-radius: 13px;
+  background: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.switch-btn img {
+     width: 124px;
+    height: 90px;
+    object-fit: contain;
+    /* TOP: 12PX; */
+    margin-top: 5px;
+    margin-left: 2px;
+}
+
+/* Address */
+.address-block {
+     padding-top: 25px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.address-row {
+  margin-top: 21px;
+  display: grid;
+  grid-template-columns: 1fr 44px;
+  gap: 10px;
+  align-items: center;
+}
+
+.address-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+  line-height: 1.25;
+  letter-spacing: -0.25px;
+  word-break: break-all;
+      margin-top: -33px;
+
+}
+
+.address-text span {
+  color: #d6a100;
+  font-weight: 700;
+}
+
+.copy-btn{
+  width:40px;
+  height:40px;
+  border:none;
+  border-radius:14px;
+  background:#f7f7f7;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  flex-shrink:0; /* chống bị co kéo */
+}
+
+/* KHUNG CỐ ĐỊNH */
+.copy-icon-box{
+  width:22px;
+  height:22px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:visible;
+}
+
+/* ẢNH RIÊNG */
+.copy-icon-img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.address-row {
+  position: relative;
+  margin-top: 21px;
+
+  display: block;
+  padding-right: 54px; /* chừa chỗ cố định cho nút copy */
+}
+
+.address-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+  line-height: 1.25;
+  letter-spacing: -0.25px;
+  word-break: break-all;
+  margin-top: -7px;
+}
+
+.copy-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 14px;
+  background: #f7f7f7;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* khung icon cố định */
+.copy-icon-box {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ảnh icon chỉnh riêng */
+.copy-icon-img {
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
+}
+.copy-btn img {
+   width: 97px;
+    height: 100px;
+    /* margin-top: -30px; */
+  object-fit: contain;
+}
+
+/* More */
+.more-detail {
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  color:#787981;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* AI */
+.ai-button {
+  position: fixed;
+  right: calc(50% - 190px);
+  bottom: 102px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-button img {
+  width: 94px;
+  height: 94px;
+  object-fit: contain;
+}
+
+/* Bottom */
+.bottom-action {
+  position: fixed;
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 428px;
+  padding: 0 16px;
+  background: #fff;
+}
+
+.bottom-action button {
+      width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 9px;
+    background: #fcd535;
+    color: #111;
+    font-size: 16px;
+    font-weight: 550;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+   <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    >
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- iPhone/iPad -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="default"
+    >
+    <meta name="apple-mobile-web-app-title" content="Binance Demo">
+
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="./img/images/apple-touch-icon-180.png"
+>
+
+    <title>Binance Demo</title>
+        <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="index-main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Top Header -->
+        <div class="top-header">
+            <div class="user-avatar">
+                <i class="fa-solid fa-user"></i>
+                <span class="status-dot"></span>
+            </div>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Thỏa thuận ngừng bắn Mỹ-Iran sụp đổ">
+            </div>
+            <div class="header-right-icons">
+                <i class="fa-solid fa-expand"></i>
+                <div class="notif-icon">
+                    <i class="fa-regular fa-comment-dots"></i>
+                    <span class="badge">99+</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wallet Overview -->
+        <div class="wallet-summary">
+            <div class="total-label">Tổng giá trị dự kiến (VND) <i class="fa-solid fa-chevron-up"></i></div>
+            <div class="balance-row">
+                <div class="balance-amount">6.723.881,42 <span class="symbol">₫</span></div>
+                <button class="btn-deposit-yellow">Nạp tiền</button>
+            </div>
+            <div class="pnl-negative">PNL hôm nay <span class="pnl-val">-58.774,18 ₫(-0,87%)</span> <i class="fa-solid fa-chevron-down"></i></div>
+        </div>
+
+        <!-- Quick Services Grid -->
+        <div class="services-grid">
+            <!-- P2P Card -->
+            <div class="service-card">
+                <div class="card-header">
+                    <span>Lệnh P2P</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="card-sub">Mua/Bán tiền mã hóa với VND</div>
+                <div class="card-icons">
+                    <div class="icon-item"><i class="fa-solid fa-users-viewfinder"></i><span>P2P</span></div>
+                    <div class="icon-item"><i class="fa-solid fa-magnifying-glass-dollar"></i><span>Tìm ưu đãi</span></div>
+                </div>
+            </div>
+            <!-- Fear & Greed Card -->
+            <div class="service-card">
+                <div class="card-header">
+                    <span>Sợ hãi và tham lam</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="gauge-container">
+                    <div class="gauge-chart"></div>
+                    <div class="gauge-value">
+                        <span class="num">49</span>
+                        <span class="text">Bình thường</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Market List Tabs -->
+        <div class="market-section">
+            <div class="market-tabs">
+                <span class="active">Danh sách yêu thích</span>
+                <span>Phổ biến</span>
+                <span>Alpha</span>
+                <span>Mới</span>
+            </div>
+            <div class="market-sub-tabs">
+                <span class="active">Tất cả</span>
+                <span>Spot</span>
+                <span>Futures</span>
+            </div>
+
+            <!-- Market Items -->
+            <div class="market-list">
+                <div class="market-item">
+                    <div class="coin-info">
+                        <div class="coin-name">XAGUSDT <span class="tag">Vĩnh cửu</span></div>
+                    </div>
+                    <div class="coin-price">
+                        <div class="price-main">83,97</div>
+                        <div class="price-fiat">2.211.029,1846 ₫</div>
+                    </div>
+                    <div class="coin-change positive">+3,17%</div>
+                </div>
+
+                <div class="market-item">
+                    <div class="coin-info">
+                        <div class="coin-name">BTC <span class="pair">/USDT</span></div>
+                    </div>
+                    <div class="coin-price">
+                        <div class="price-main">80.717,90</div>
+                        <div class="price-fiat">2.125.397.554,12 ₫</div>
+                    </div>
+                    <div class="coin-change negative">-0,54%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Nav -->
+        <div class="bottom-nav">
+            <div class="nav-item active"><i class="fa-solid fa-house"></i><span>Trang chủ</span></div>
+            <div class="nav-item"><i class="fa-solid fa-chart-line"></i><span>Thị trường</span></div>
+            <div class="nav-item"><i class="fa-solid fa-repeat"></i><span>Giao dịch</span></div>
+            <div class="nav-item"><i class="fa-solid fa-file-contract"></i><span>Futures</span></div>
+            <a href="overview.html" style="text-decoration: none; color: inherit; flex:1;">
+                <div class="nav-item"><i class="fa-solid fa-wallet"></i><span>Tài sản</span></div>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

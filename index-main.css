@@ -1,0 +1,67 @@
+:root {
+    --binance-yellow: #fcd535;
+    --text-gray: #707a8a;
+    --text-black: #1e2329;
+    --up-green: #0ecb81;
+    --down-red: #f6465d;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+
+.app-container { max-width: 450px; margin: 0 auto; background: #fff; min-height: 100vh; padding-bottom: 70px; }
+
+/* Header */
+.top-header { display: flex; align-items: center; padding: 10px 15px; gap: 12px; }
+.user-avatar { position: relative; background: #f0f0f0; padding: 8px; border-radius: 50%; color: var(--binance-yellow); }
+.status-dot { position: absolute; bottom: 2px; right: 2px; width: 8px; height: 8px; background: var(--binance-yellow); border: 1.5px solid #fff; border-radius: 50%; }
+.search-bar { flex: 1; background: #eff2f5; border-radius: 20px; display: flex; align-items: center; padding: 6px 12px; color: var(--text-gray); }
+.search-bar input { border: none; background: transparent; padding-left: 8px; font-size: 13px; width: 100%; }
+.header-right-icons { display: flex; gap: 15px; font-size: 18px; }
+.notif-icon { position: relative; }
+.badge { position: absolute; -top: 8px; -right: 8px; background: var(--binance-yellow); color: #000; font-size: 8px; padding: 1px 3px; border-radius: 10px; font-weight: bold; }
+
+/* Wallet */
+.wallet-summary { padding: 15px; }
+.total-label { color: var(--text-gray); font-size: 13px; margin-bottom: 8px; }
+.balance-row { display: flex; justify-content: space-between; align-items: center; }
+.balance-amount { font-size: 28px; font-weight: bold; }
+.symbol { text-decoration: underline; margin-left: 4px; }
+.btn-deposit-yellow { background: var(--binance-yellow); border: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; }
+.pnl-negative { font-size: 12px; color: var(--text-gray); margin-top: 8px; }
+.pnl-val { color: var(--down-red); }
+
+/* Services Grid */
+.services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 15px; }
+.service-card { border: 1px solid #eff2f5; border-radius: 12px; padding: 12px; }
+.card-header { display: flex; justify-content: space-between; font-weight: bold; font-size: 14px; }
+.card-sub { font-size: 11px; color: var(--text-gray); margin: 5px 0 15px; }
+.card-icons { display: flex; gap: 20px; }
+.icon-item { text-align: center; font-size: 11px; color: var(--text-black); }
+.icon-item i { display: block; font-size: 20px; margin-bottom: 5px; }
+
+/* Gauge Chart giả lập */
+.gauge-container { text-align: center; margin-top: 10px; }
+.gauge-chart { width: 80px; height: 40px; border: 8px solid #0ecb81; border-bottom: none; border-radius: 100px 100px 0 0; margin: 0 auto; position: relative; }
+.gauge-chart::after { content: ""; position: absolute; bottom: -4px; left: 50%; width: 10px; height: 10px; background: #000; border-radius: 50%; transform: translateX(-50%); }
+.gauge-value .num { display: block; font-size: 18px; font-weight: bold; }
+.gauge-value .text { font-size: 10px; color: var(--text-gray); }
+
+/* Market List */
+.market-tabs { display: flex; gap: 20px; padding: 15px; overflow-x: auto; font-weight: bold; color: var(--text-gray); }
+.market-tabs .active { color: var(--text-black); border-bottom: 3px solid var(--binance-yellow); padding-bottom: 5px; }
+.market-item { display: flex; align-items: center; padding: 15px; border-bottom: 1px solid #f8f9fa; }
+.coin-info { flex: 1; }
+.coin-name { font-weight: bold; font-size: 15px; }
+.tag { background: #eff2f5; font-size: 10px; padding: 2px 4px; border-radius: 4px; color: var(--text-gray); }
+.coin-price { text-align: right; margin-right: 15px; }
+.price-main { font-weight: bold; font-size: 15px; }
+.price-fiat { font-size: 11px; color: var(--text-gray); }
+.coin-change { width: 80px; padding: 8px; border-radius: 4px; text-align: center; color: #fff; font-weight: bold; }
+.coin-change.positive { background: var(--up-green); }
+.coin-change.negative { background: var(--down-red); }
+
+/* Bottom Nav */
+.bottom-nav { position: fixed; bottom: 0; width: 100%; max-width: 450px; background: #fff; display: flex; border-top: 1px solid #eff2f5; padding: 10px 0; }
+.nav-item { flex: 1; text-align: center; font-size: 10px; color: var(--text-gray); cursor: pointer; }
+.nav-item i { display: block; font-size: 20px; margin-bottom: 4px; }
+.nav-item.active { color: var(--text-black); }

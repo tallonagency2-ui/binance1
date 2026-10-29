@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+   <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    >
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- iPhone/iPad -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="default"
+    >
+    <meta name="apple-mobile-web-app-title" content="Binance Demo">
+
+   <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="./img/images/apple-touch-icon-180.png"
+>
+
+    <title>Binance Demo</title>
+      <link rel="stylesheet" href="./global.css">
+  <link rel="stylesheet" href="network_trx.css" />
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+
+    <header class="header">
+     <img src="img/images/arrow_left.png"
+     class="icon-back"
+     onclick="window.location.href='wallet_usdt.html'"
+     alt="back">
+
+      <h1>Nạp USDT</h1>
+
+      <div class="header-icons">
+        <img src="img/images/help.png" class="icon-help" alt="help">
+        <!-- <img src="img/images/history.png" class="icon-history" alt="history"> -->
+      </div>
+    </header>
+
+    <section class="notice">
+      <span class="notice-icon">!</span>
+      <p>
+        Địa chỉ của bạn đã được cập nhật thành địa chỉ TSS.
+        <b>Tìm hiểu thêm</b>
+      </p>
+      <span class="notice-close">×</span>
+    </section>
+
+    <section class="qr-section">
+      <div class="qr-box">
+        <img src="img/images/usdt-qr.png" class="qr-img" alt="qr">
+        <!-- <img src="img/images/usdt.png" class="qr-logo" alt="usdt"> -->
+      </div>
+    </section>
+
+    <section class="info-section">
+      <div class="network-block">
+        <div>
+          <div class="label">Mạng lưới</div>
+          <div class="network-name">TRX</div>
+          <div class="network-sub">Tron (TRC20)</div>
+          <div class="contract">Thông tin hợp đồng <u>***ljJ6t</u></div>
+        </div>
+
+        <button class="switch-btn">
+          <img src="img/images/swap.png" alt="switch">
+        </button>
+      </div>
+
+      <div class="address-block">
+        <div class="label">Địa chỉ nạp</div>
+
+        <div class="address-row">
+          <div class="address-text">
+            <span>TXujMD</span>yxVDSNURtzpc8isTTbWuG5<span>YiV9QN</span>
+          </div>
+
+        <button class="copy-btn">
+
+  <div class="copy-icon-box">
+    <img src="img/images/copy.png"
+         class="copy-icon-img"
+         alt="copy">
+  </div>
+
+</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="more-detail">
+  <span>Thêm chi tiết</span>
+
+  <i class="fa-solid fa-chevron-down detail-arrow"></i>
+</div>
+    <button class="ai-button">
+      <img src="img/images/AI.png" alt="AI">
+    </button>
+
+    <div class="bottom-action">
+      <button>Lưu và chia sẻ địa chỉ</button>
+    </div>
+
+  </div>
+</body>
+</html>

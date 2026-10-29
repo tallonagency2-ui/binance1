@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="extra.css">
+     <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    >
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- iPhone/iPad -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="default"
+    >
+    <meta name="apple-mobile-web-app-title" content="Binance Demo">
+
+   <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="./img/images/apple-touch-icon-180.png"
+>
+
+    <title>Binance Demo</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+    <div class="header-top">
+        <!-- Nhóm bên trái -->
+      <div class="header-left">
+
+    <div class="icon-box avatar">
+        <img src="img/images/avta.png">
+    </div>
+
+    <div class="icon-box hand">
+        <img src="img/images/avta1.png">
+    </div>
+
+</div>
+
+        <!-- Nhóm ở giữa -->
+        <div class="tab-switcher">
+            <span class="active">Sàn giao dịch</span>
+            <span>Ví</span>
+        </div>
+
+        <!-- Nhóm bên phải -->
+        <div class="header-right">
+
+    <div class="icon-box scan">
+        <img src="img/images/avta11.png">
+    </div>
+
+    <div class="icon-box message">
+        <img src="img/images/avta111.png">
+        <!-- <span class="badge">99+</span> -->
+    </div>
+
+</div>
+    </div>
+
+    <!-- Thanh tìm kiếm -->
+    <div class="search-bar">
+      
+        <input type="text" placeholder="Thỏa thuận ngừng bắn Mỹ-Iran sụp đổ">
+    </div>
+</header>
+
+        <!-- Balance Section -->
+<div class="top-white-card">
+
+  <section class="balance-section">
+    <div class="balance-title">
+      Tổng giá trị dự kiến (VND)
+      <span class="balance-arrow"></span>
+    </div>
+
+    <div class="balance-row">
+      <h1 class="amount">17.720.143 <span>₫</span></h1>
+      <button class="deposit-btn">Nạp tiền</button>
+    </div>
+
+    <div class="pnl">
+      <span class="pnl-label">PNL hôm nay</span>
+      <span class="pnl-value negative">-58.774,18 đ(-0,87%)</span>
+      <i class="fa-solid fa-chevron-down pnl-arrow-icon"></i>
+    </div>
+  </section>
+
+  <section class="quick-cards">
+    
+            <div class="card p2p-card">
+                <div class="card-header">Lệnh P2P <img src="img/images/arrow.png" alt=">" class="icon-xs"></div>
+                <p>Mua/Bán tiền mã hóa với VND</p>
+                <div class="card-icons">
+                  
+                    <div class="card-icon-item">
+    <img src="img/images/p2p.png" alt="P2P">
+    <span class="card-text p2p-text">P2P</span>
+</div>
+
+<div class="card-icon-item">
+    <img src="img/images/seach.png" alt="">
+    <span class="card-text uu-dai-text">
+        Tìm ưu đãi
+    </span>
+</div>
+                </div>
+            </div>
+            <div class="card greed-card">
+                <div class="card-header">Sợ hãi và tham lam <img src="img/images/arrow.png" alt=">" class="icon-xs"></div>
+                <div class="gauge-container">
+                    <img src="img/images/normal.png" alt="Gauge" class="gauge-img">
+                    <div class="gauge-value">
+                        <!-- <span class="num">51</span>
+                        <span class="text">Bình thường</span> -->
+                    </div>
+                </div>
+            </div>
+      
+  </section>
+
+</div>
+
+       
+        <!-- Quick Actions -->
+       
+<section class="market-card">
+  <nav class="market-tabs">
+    <span class="tab active">Danh sách yêu thích</span>
+    <span class="tab">Phổ biến</span>
+    <span class="tab">Alpha</span>
+    <span class="tab">Mới</span>
+    <span class="tab">Tăng giá</span>
+  </nav>
+
+  <div class="filter-bar">
+    <span class="active">Tất cả</span>
+    <span>Spot</span>
+    <span>Futures</span>
+  </div>
+
+  <table class="asset-table">
+    <thead>
+  <tr>
+    <th class="th-name">Tên</th>
+
+    <th class="th-price text-right">
+      Giá gần nhất
+    </th>
+
+    <th class="th-change text-right">
+      Thay đổi 24h
+    </th>
+  </tr>
+</thead>
+
+    <tbody>
+      <tr>
+        <td>
+          <strong>XAGUSDT</strong>
+          <span class="tag">Vĩnh cửu</span>
+        </td>
+        <td class="text-right">
+          <strong>53,51</strong>
+          <small>2.211.029,1846 đ</small>
+        </td>
+        <td class="text-right">
+          <span class="price-btn up">+3,17%</span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>XAUUSDT</strong>
+          <span class="tag">Vĩnh cửu</span>
+        </td>
+        <td class="text-right">
+          <strong>4.035,84</strong>
+          <small>123.958.506,15 đ</small>
+        </td>
+        <td class="text-right">
+          <span class="price-btn up">+0,62%</span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>BTC</strong>
+          <span class="pair">/USDT</span>
+        </td>
+        <td class="text-right">
+          <strong>80.492,19</strong>
+          <small>2.125.397.554,12 đ</small>
+        </td>
+        <td class="text-right">
+          <span class="price-btn down">-0,54%</span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>XRP</strong>
+          <span class="pair">/USDT</span>
+        </td>
+        <td class="text-right">
+          <strong>1,4482</strong>
+          <small>38.132,81 đ</small>
+        </td>
+        <td class="text-right">
+          <span class="price-btn down">-0,50%</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>XRP</strong>
+          <span class="pair">/USDT</span>
+        </td>
+        <td class="text-right">
+          <strong>1,4482</strong>
+          <small>38.132,81 đ</small>
+        </td>
+        <td class="text-right">
+          <span class="price-btn down">-0,50%</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>XRP</strong>
+          <span class="pair">/USDT</span>
+        </td>
+        <td class="text-right">
+          <strong>1,4482</strong>
+          <small>38.132,81 đ</small>
+        </td>
+        <td class="text-right">
+          <span class="price-btn down">-0,50%</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>XRP</strong>
+          <span class="pair">/USDT</span>
+        </td>
+        <td class="text-right">
+          <strong>1,4482</strong>
+          <small>38.132,81 đ</small>
+        </td>
+        <td class="text-right">
+          <span class="price-btn down">-0,50%</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>XRP</strong>
+          <span class="pair">/USDT</span>
+        </td>
+        <td class="text-right">
+          <strong>1,4482</strong>
+          <small>38.132,81 đ</small>
+        </td>
+        <td class="text-right">
+          <span class="price-btn down">-0,50%</span>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+</section>
+        <!-- Market Tabs -->
+     <div class="floating-ai">
+            <img src="img/images/AI.png" alt="AI">
+        </div>
+
+        <!-- Asset List -->
+      
+<nav class="bottom-sub-tabs">
+
+    <span class="tab-discover active">
+        Khám phá
+    </span>
+
+    <span class="tab-follow">
+        Đang theo dõi
+    </span>
+
+    <span class="tab-campaign">
+        Chiến dịch
+    </span>
+
+    <span class="tab-coin">
+        Đồng tiền
+    </span>
+
+</nav>
+        <!-- Bottom Nav -->
+        <footer class="footer-nav">
+
+   <a href="index-extra.html" class="footer-item">
+
+    <!-- icon riêng -->
+    <div class="footer-home-icon">
+        <img src="img/images/main_bncc.png">
+    </div>
+
+    <!-- chữ riêng -->
+    <span class="footer-home-text">
+        Trang chủ
+    </span>
+
+</a>
+
+    <div class="footer-item">
+        <div class="footer-icon">
+            <img src="img/images/market.png">
+        </div>
+        <span class="footer-text">Thị trường</span>
+    </div>
+
+    <div class="footer-item">
+        <div class="footer-icon">
+            <img src="img/images/trade.png">
+        </div>
+        <span class="footer-text">Giao dịch</span>
+    </div>
+
+    <div class="footer-item">
+        <div class="footer-icon">
+            <img src="img/images/futures.png">
+        </div>
+        <span class="footer-text">HĐTL</span>
+    </div>
+
+    <a href="wallet.html" class="footer-item active">
+
+    <div class="footer-click">
+
+        <div class="footer-icon">
+            <img src="img/images/wallet.png">
+        </div>
+
+        <span class="footer-text">
+            Tài sản
+        </span>
+
+    </div>
+
+</a>
+
+</footer>
+    </div>
+</body>
+</html>

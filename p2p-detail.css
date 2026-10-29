@@ -1,0 +1,537 @@
+/* Khởi tạo cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #1e2329;
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 450px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    background-color: #ffffff;
+}
+
+/* Header */
+.header {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header-title {
+      flex: 1;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    bottom: -9px;
+    /* top: 10px; */
+    position: relative
+}
+
+.icon-back {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Status Section */
+.status-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.main-amount {
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: -3px;
+}
+.floating-ai {
+     position: fixed;
+    bottom: 90px;
+    right: 13px;
+    width: 46px;
+    height: 46px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.floating-ai img { width: 105px; }
+.status-badge {
+   color: #45c570;
+    font-weight: 600;
+    font-size: 14px;
+    MARGIN-LEFT: -6px;
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.status-subtext {
+  color: #707a8a;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* Card */
+.order-card {
+    margin: 18px 15px 0;
+    padding: 15px;
+    border: 1px solid #eaecef;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.order-type {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.type-sell { color: #f6465d; }
+
+.btn-chat {
+  background-color: #fad53c;
+    border: none;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: -2px;
+}
+
+/* Rows */
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.label {
+    color:#747474;
+   font-size: 15px;
+    font-weight: 400;
+}
+
+.value {
+    font-size: 14px;
+/* color: #707a8a; */
+    font-weight: 400;
+}
+.value1 {
+    font-size: 14px;
+   
+}
+.font-bold { 
+    font-weight: 600; }
+
+.dotted {
+    border-bottom: 1px dotted #9ca3af;
+    line-height: 1.1;
+}
+.label {
+    /* border-bottom: 1px dotted #9ca3af; */
+    line-height: 1.1;
+}
+
+
+/* Sub-tree (Đường kẻ dọc) */
+/* .sub-tree {
+    border-left: 1px solid #eaecef;
+    margin-left: 5px;
+    padding-left: 15px;
+} */
+
+.mt-10 { margin-top: 15px; }
+
+.copy-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.copy-box i {
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+/* Animation cho phần ẩn hiện */
+.extra-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.extra-content.show {
+    max-height: 400px;
+    margin-top: 10px;
+}
+
+.arrow-container {
+    text-align: center;
+    cursor: pointer;
+    /* margin-top: 10px; */
+}
+
+#arrow-icon {
+    color: #9ca3af;
+    font-size: 12px;
+    transition: transform 0.3s;
+}
+
+.rotate { transform: rotate(180deg); }
+
+/* Menu Bottom (Đảm bảo thẳng hàng) */
+.bottom-menu {
+    margin-top: 30px;
+    padding: 0 15px;
+}
+
+.menu-item-row, .menu-item-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Quan trọng: Giữ mọi thứ thẳng hàng */
+    padding: 12px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+.menu-item-row {
+    display: flex;
+    justify-content: space-between; /* Đẩy 2 khối về 2 đầu */
+    align-items: center;           /* Căn giữa tất cả theo chiều dọc */
+    padding: 11px 0;
+    width: 100%;                   /* Đảm bảo chiếm hết chiều ngang card */
+}
+
+.menu-label {
+    font-size: 13.6px;
+    /* color: #707a8a; */
+    white-space: nowrap;           /* QUAN TRỌNG: Không cho chữ này xuống dòng */
+    margin-right: 10px;            /* Tạo khoảng cách an toàn với khối bên phải */
+}
+
+.menu-value-container {
+    display: flex;
+    align-items: center;           /* Giúp vạch vàng và chữ bên phải thẳng hàng nhau */
+    justify-content: flex-end;     /* Đẩy nội dung sát lề phải */
+    flex-shrink: 0;                /* Không cho phép khối này bị bóp méo */
+}
+
+/* .yellow-bar {
+    width: 3px;
+    height: 14px;
+    background-color: #fcd535;
+    margin-right: 6px;
+    display: inline-block;
+} */
+
+.menu-value-text {
+       font-size: 13px;
+    /* color: #707a8a; */
+    text-align: right;
+    line-height: 1;
+    font-weight: 400;
+    MARGIN-RIGHT: 9px;
+}
+.menu-value-box {
+    display: flex;
+    align-items: center; /* Giúp vạch vàng và chữ nằm trên 1 trục ngang */
+}
+
+.yellow-bar {
+    width: 3px;
+    height: 9px;
+    background-color: #fcd535;
+    margin-right: 8px;
+}
+
+.menu-item-link i {
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    width: 40px;
+    height: 22px;
+}
+
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #e5e7eb;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px; width: 16px;
+    left: 3px; bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider { background-color: #fcd535; }
+input:checked + .slider:before { transform: translateX(18px); }
+
+/* Nút dưới cùng */
+.footer-action {
+    margin-top: auto;
+    padding: 8px 15px;
+}
+
+.btn-main {
+    width: 100%;
+    background-color:#fad53c;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+        margin-top: 8px;
+}
+.footer-action{
+       border-top: 1px solid #eaecef;
+            color: #ffffff;
+    }
+    /* Điều chỉnh hàng chi tiết */
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px; /* Tăng khoảng cách một chút */
+}
+
+/* Kiểu chữ cho nhãn (Label) */
+.label {
+    color: #707a8a; /* Màu xám đặc trưng của Binance */
+    font-size: 14px;
+}
+
+/* Đường kẻ dotted sát chữ hơn */
+.dotted {
+    border-bottom: 1px dotted #707a8a;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 0.9;
+}
+
+/* Cấu trúc nhánh cây (Tree-line) cho phần mở rộng */
+.sub-tree {
+       /* position: relative; */
+    /* margin-left: 10px; */
+    padding-left: 22px;
+    /* border-left: 0.1px solid #1b2029; */
+    margin-top: -4px;
+}
+
+/* Tạo nhánh ngang cho từng hàng con */
+.sub-row {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.sub-row::before {
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 92%;
+    width: 5px;
+    height: 1.5px;
+    background-color: #707a8a;
+}
+
+/* Điều chỉnh card để trông chuyên nghiệp hơn */
+.order-card {
+    margin: 18px 15px;
+    padding: 20px 16px;
+    border: 1px solid #dbdada;
+    border-radius: 12px;
+}
+
+/* Nút Trò chuyện màu vàng nhạt hơn */
+.btn-chat {
+    background-color: #FCD535; /* Màu vàng chuẩn */
+    color: #1E2329;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+/* Căn chỉnh lại thanh phương thức thanh toán */
+.menu-value-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.yellow-bar {
+    width: 3px;
+    height: 14px;
+    background-color: #FCD535;
+    border-radius: 2px;
+}
+.sub-tree{
+        position: relative;
+    margin-left: -5px;
+    padding-left: 27px;
+    margin-top: 2px;
+}
+
+/* đường dọc riêng */
+.tree-line{
+        position: absolute;
+    left: 8px;
+    top: -9px;
+    width: 1px;
+    height: 49px;
+    background: #707a8a;
+}
+
+/* nhánh ngang */
+.sub-row{
+    position: relative;
+}
+
+.sub-row::before{
+    content: "";
+
+    position: absolute;
+
+    left: -18px;
+    top: 50%;
+
+    width: 10px;
+    height: 1px;
+
+    background: #707a8a;
+}
+/* ===== SỐ LƯỢNG MỞ KHÓA ===== */
+.unlock-label{
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    "Helvetica Neue",
+    sans-serif;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    color: #707a8a;
+
+    letter-spacing: -0.15px;
+    line-height: 1.25;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+/* giá trị bên phải */
+.unlock-value{
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    sans-serif;
+
+    font-size: 13.5px;
+    font-weight: 450;
+
+    color: #1e2329;
+
+    letter-spacing: -0.2px;
+
+    font-variant-numeric: tabular-nums;
+}
+
+/* ===== PHÍ ===== */
+.fee-label{
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    sans-serif;
+
+    font-size: 13.5px;
+    font-weight: 400;
+ border-bottom: 1px dotted #d6d6d6;
+    color: #707a8a;
+
+    letter-spacing: -0.15px;
+    line-height: 1.25;
+
+    -webkit-font-smoothing: antialiased;
+}
+.value.dotted{
+    position: relative;
+    top: 2px; /* chỉnh xuống */
+
+    /* hoặc */
+    /* margin-top: 2px; */
+}
+
+.fee-value{
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    sans-serif;
+
+    font-size: 14px;
+    font-weight: 450;
+
+    color: #1e2329;
+
+    letter-spacing: -0.2px;
+
+    font-variant-numeric: tabular-nums;
+}
+.btn-main {
+    color: #111 !important;
+    -webkit-text-fill-color: #111 !important;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    text-decoration: none;
+}
+button,
+button * {
+    color: #111 !important;
+    -webkit-text-fill-color: #111 !important;
+}

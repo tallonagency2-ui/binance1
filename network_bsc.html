@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <meta name="theme-color" content="#f5f5f5">
+  <meta name="color-scheme" content="light">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="default"
+  >
+
+  <title>Nạp USDT - BSC | SAWSPP Demo</title>
+
+  <link rel="stylesheet" href="./network_bsc.css">
+  <script src="./network_bsc.js" defer></script>
+</head>
+
+<body>
+
+<div class="bsc-page">
+
+  <!-- STATUS BAR PREVIEW -->
+  <div class="bsc-status-preview" aria-hidden="true">
+
+    <span class="bsc-preview-time">02:23</span>
+
+    <div class="bsc-preview-icons">
+
+      <svg width="22" height="15"
+           viewBox="0 0 22 15"
+           fill="currentColor">
+        <rect x="1" y="10" width="4" height="5" rx="1"/>
+        <rect x="6.5" y="7" width="4" height="8" rx="1"/>
+        <rect x="12" y="3.5" width="4" height="11.5" rx="1"/>
+        <rect x="17.5" y="0" width="4" height="15" rx="1" opacity=".32"/>
+      </svg>
+
+      <svg width="21" height="16"
+           viewBox="0 0 24 20"
+           fill="none"
+           stroke="currentColor"
+           stroke-linecap="round"
+           stroke-width="3">
+        <path d="M2 6C8.1.7 15.9.7 22 6"/>
+        <path d="M5 10c4.2-3.7 9.8-3.7 14 0"/>
+        <path d="M9 14c1.8-1.6 4.2-1.6 6 0"/>
+        <circle cx="12" cy="17" r="1"
+                fill="currentColor" stroke="none"/>
+      </svg>
+
+      <span class="bsc-preview-battery">92</span>
+
+    </div>
+  </div>
+
+
+  <!-- HEADER -->
+  <header class="bsc-header">
+
+    <!-- QUAY LẠI VÀ MỞ BẢNG CHỌN MẠNG -->
+    <a
+      href="./usdt_network.html?openNetwork=true"
+      class="bsc-header-control bsc-back"
+      aria-label="Quay về chọn mạng lưới"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M20 12H4M11 5l-7 7 7 7"/>
+      </svg>
+    </a>
+
+    <h1>Nạp USDT</h1>
+
+   
+<div class="bsc-header-actions">
+
+  <!-- ICON HELP -->
+  <button
+    type="button"
+    class="bsc-header-control bsc-help-btn"
+    id="helpButton"
+    aria-label="Trợ giúp"
+  >
+    <img
+      src="./img/images/help1.png"
+      class="bsc-help-img"
+      alt=""
+    >
+  </button>
+
+  <!-- ICON HISTORY -->
+  <button
+    type="button"
+    class="bsc-header-control bsc-history-btn"
+    id="historyButton"
+    aria-label="Lịch sử nạp"
+  >
+    <img
+      src="./img/images/history.png"
+      class="bsc-history-img"
+      alt=""
+    >
+  </button>
+
+</div>
+
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="bsc-main">
+
+    <!-- NETWORK CARD -->
+    <a
+      class="bsc-network-card"
+      href="./usdt_network.html?openNetwork=true"
+      aria-label="BSC, BNB Smart Chain BEP20. Chọn mạng lưới"
+    >
+
+      <div class="bsc-network-label">
+        Mạng lưới
+      </div>
+
+      <div class="bsc-network-row">
+
+        <strong class="bsc-network-code">
+          BSC
+        </strong>
+
+        <span class="bsc-network-description">
+          BNB Smart Chain (BEP20)
+        </span>
+
+        <svg
+          class="bsc-chevron"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.9"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="m9 4 8 8-8 8"/>
+        </svg>
+
+      </div>
+
+      <div class="bsc-contract-line">
+        Thông tin hợp đồng
+        <span>***<u>97955</u></span>
+      </div>
+
+    </a>
+
+
+    <!-- QR / DEPOSIT ADDRESS -->
+    <section
+      class="bsc-address-card"
+      aria-label="Địa chỉ nạp USDT trên mạng BSC"
+    >
+
+      <div class="bsc-qr-area">
+
+        <div class="bsc-qr-holder">
+
+          <img
+            src="./img/images/qr-bsc-demo.png"
+            class="bsc-qr"
+            alt="Mã QR địa chỉ nạp USDT BSC minh họa"
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- ADDRESS -->
+      <div class="bsc-address-block">
+
+        <div class="bsc-address-label">
+
+          Địa chỉ nạp
+
+          <svg
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            stroke="currentColor"
+            stroke-width="2"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="m9 4 8 8-8 8"/>
+          </svg>
+
+        </div>
+
+
+        <div class="bsc-address-row">
+
+          <div
+            class="bsc-address-text"
+            id="depositAddress"
+            data-address="0x6ae660d8c3f1886995518c6288541195b3faa7cb"
+          >
+            <span class="bsc-address-accent">0x6ae6</span>60d8c3f1886995518c6288541195b3<span class="bsc-address-accent">faa7cb</span>
+          </div>
+
+
+          <!-- COPY ADDRESS -->
+          <button
+            type="button"
+            class="bsc-copy-button"
+            id="copyButton"
+            aria-label="Sao chép địa chỉ nạp"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="8" y="3"
+                    width="12" height="13" rx="1"/>
+
+              <path d="M5 8H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-1"/>
+            </svg>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DEPOSIT DETAILS -->
+    <section
+      class="bsc-details"
+      aria-label="Thông tin nạp tiền"
+    >
+
+      <div class="bsc-detail-row">
+        <span>Nạp tiền đến</span>
+        <strong>Ví Spot</strong>
+      </div>
+
+      <div class="bsc-detail-row">
+        <span>Số tiền nạp tối thiểu</span>
+        <strong>&gt;0,01 USDT</strong>
+      </div>
+
+      <div class="bsc-detail-row">
+        <span class="bsc-dashed">
+          Đã ghi có (Đã cho phép giao dịch)
+        </span>
+        <strong>1 Lượt xác nhận</strong>
+      </div>
+
+      <div class="bsc-detail-row">
+        <span class="bsc-dashed">
+          Đã mở khóa (Đã cho phép rút tiền)
+        </span>
+        <strong>1 Lượt xác nhận</strong>
+      </div>
+
+    </section>
+
+
+    <!-- NOTES -->
+    <div class="bsc-notes">
+
+      <p>
+        • Không giao dịch với các thực thể bị trừng phạt.
+        <a href="#" id="moreInfoLink">
+          Tìm hiểu thêm.
+        </a>
+      </p>
+
+      <p>
+        • Không gửi NFT đến địa chỉ này.
+      </p>
+
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="bsc-footer">
+
+    <button
+      type="button"
+      class="bsc-share-main"
+      id="shareMainButton"
+    >
+      Lưu và chia sẻ địa chỉ
+    </button>
+
+  </footer>
+
+</div>
+
+
+<!-- TOAST -->
+<div
+  class="bsc-toast"
+  id="toast"
+  role="status"
+  aria-live="polite"
+></div>
+
+
+<!-- BOTTOM SHEET -->
+<div
+  class="bsc-modal"
+  id="actionModal"
+  hidden
+>
+
+  <button
+    type="button"
+    class="bsc-modal-backdrop"
+    id="closeModalBackdrop"
+    aria-label="Đóng menu"
+  ></button>
+
+  <div
+    class="bsc-modal-sheet"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+  >
+
+    <span class="bsc-modal-handle"></span>
+
+    <h2 id="modalTitle">
+      Lưu và chia sẻ địa chỉ
+    </h2>
+
+    <button
+      type="button"
+      id="downloadQrButton"
+    >
+      Lưu mã QR
+    </button>
+
+    <button
+      type="button"
+      id="shareAddressButton"
+    >
+      Chia sẻ địa chỉ nạp
+    </button>
+
+    <button
+      type="button"
+      id="copyAddressSheetButton"
+    >
+      Sao chép địa chỉ
+    </button>
+
+    <button
+      type="button"
+      class="bsc-modal-cancel"
+      id="closeModalButton"
+    >
+      Hủy
+    </button>
+
+  </div>
+
+</div>
+
+</body>
+</html>

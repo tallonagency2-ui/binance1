@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    >
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- iPhone/iPad -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="default"
+    >
+    <meta name="apple-mobile-web-app-title" content="Binance Demo">
+
+   <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="./img/images/apple-touch-icon-180.png"
+>
+
+    <title>Binance Demo</title>
+        <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="p2p-detail.css">
+    <!-- Icon FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Header -->
+        <div class="header">
+            <!-- <i class="fa-solid fa-arrow-left icon-back"></i> -->
+            <i class="fa-solid fa-arrow-left icon-back"
+   onclick="window.location.href='assets-history.html'"></i>
+   
+            <h1 class="header-title">Chi tiết lệnh</h1>
+        </div>
+
+        <!-- Trạng thái -->
+        <div class="status-section">
+            <h2 class="main-amount">-186,79 USDT</h2>
+            <div class="status-badge">
+                <i class="fa-regular fa-circle-check"></i>
+                <span>Hoàn tất</span>
+            </div>
+            <p class="status-subtext">Bán thành công 186,79 USDT</p>
+        </div>
+
+        <!-- Card thông tin -->
+        <div class="order-card">
+            <div class="card-header">
+                <div class="order-type">
+                    <span class="type-sell">Bán</span>
+                    <span class="type-asset">USDT</span>
+                </div>
+                <button class="btn-chat">Trò chuyện</button>
+            </div>
+
+            <div class="details-list">
+                <div class="detail-row">
+                    <span class="label dotted">Số tiền Fiat</span>
+                    <span class="value1 font-bold">₫5.000.000</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label dotted1">Giá USDT</span>
+                    <span class="value1 font-bold">₫26.778</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label dotted1">Tổng số lượng</span>
+                    <span class="value1 font-bold">186,79 USDT</span>
+                </div>
+
+                <!-- Phần ẩn/hiện -->
+                <div id="extra-details" class="extra-content">
+                  <div class="sub-tree">
+
+    <!-- đường cây riêng -->
+    <div class="tree-line"></div>
+
+    <!-- SỐ LƯỢNG MỞ KHÓA -->
+    <div class="detail-row sub-row">
+
+        <span class="unlock-label dotted">
+            Số lượng mở khóa
+        </span>
+
+        <span class="unlock-value">
+            186,72 USDT
+        </span>
+
+    </div>
+
+    <!-- PHÍ -->
+    <div class="detail-row sub-row">
+
+        <span class="fee-label dotted">
+            Phí
+        </span>
+
+        <span class="fee-value">
+            0,07 USDT
+        </span>
+
+    </div>
+
+</div>
+                    <div class="detail-row mt-10">
+                        <span class="label">Lệnh số</span>
+                        <div class="copy-box">
+                            <span class="value">22881421606226161664</span>
+                            <i class="fa-regular fa-copy"></i>
+                        </div>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Thời gian tạo</span>
+                        <span class="value">2026-04-26 01:21:31</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Bí danh của người mua</span>
+                        <span class="value dotted">VN_Tokyo_Coin86</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow-container" onclick="toggleMenu()">
+                <i id="arrow-icon" class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+
+        <!-- Menu dưới -->
+        <div class="bottom-menu">
+           <div class="menu-item-row">
+    <!-- Nhãn bên trái -->
+    <span class="menu-label">Phương thức thanh toán</span>
+
+    <!-- Khối giá trị bên phải -->
+    <div class="menu-value-container">
+        <span class="yellow-bar"></span>
+        <span class="menu-value-text">Chuyển khoản ngân hàng (Việt Nam)</span>
+    </div>
+</div>
+
+            <div class="menu-item-link">
+                <span>Cần sự giúp đỡ</span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <div class="menu-item-link">
+                <span>Để lại phản hồi</span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <div class="menu-item-row">
+                <span>Theo dõi người dùng này</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+         <!-- Floating Assistant Icon -->
+        <div class="floating-ai">
+            <img src="img/images/AI.png" alt="AI">
+        </div>
+        <!-- Nút cố định dưới cùng -->
+        <div class="footer-action">
+            <button class="btn-main">Đặt lại lệnh</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const content = document.getElementById('extra-details');
+            const icon = document.getElementById('arrow-icon');
+            content.classList.toggle('show');
+            icon.classList.toggle('rotate');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1159 @@
+:root {
+    --bg-white: #ffffff;
+    --text-main: #1e2329;
+    --text-gray: #707a8a;
+    --primary-yellow: #fcd535;
+    --green: #0ecb81;
+    --red: #f6465d;
+    --border-color: #eaecef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; /* Thêm font bạn muốn vào đây */
+}
+
+* { margin: 0; padding: 0; 
+    /* box-box: border-box; */
+     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 430px;
+  height: 100vh;
+  margin: 0 auto;
+  background: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 82px;
+}
+
+/* phần footer luôn cố định */
+.footer-nav {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+
+  width: 100%;
+  max-width: 430px;
+  height: 82px;
+
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+
+  border-top: 1px solid #f2f2f2;
+  z-index: 9999;
+}
+
+/* nội dung phía trên được scroll */
+.app-container {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* chừa chỗ để bảng không bị footer che */
+.market-card {
+  padding-bottom: 95px;
+}
+/* Header */
+/* Container chính của Header */
+.header {
+    padding: 10px 15px;
+    background-color:#f5f5f5;
+}
+
+/* Dàn hàng ngang cho 3 nhóm chính */
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+.icon-box {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.avatar img {
+    width: 100px;
+    height: 77px;
+    border-radius: 50%;
+    margin-left: -30px;
+    margin-top: 35px;
+}
+.hand img {
+ width: 85px;
+    height: 58px;
+    opacity: 0.8;
+    margin-right: -52px;
+    margin-top: -30px;
+}
+.scan img {
+  width: 70px;
+    height: 53px;
+        margin-left: -48px;
+    margin-top: 35px;
+}
+.message img {
+   width: 95px;
+    height: 79px;
+    margin-left: 33px;
+    margin-top: -35px;
+}
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -6px;
+    background: #fcd535;
+    color: #000;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.icon-box:active {
+    background: rgba(0,0,0,0.06);
+    border-radius: 50%;
+}
+/* Các nhóm con cũng dùng Flex để icon nằm ngang */
+.user-info, .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Khoảng cách giữa các icon */
+}
+
+/* Tab switcher ở giữa */
+.tab-switcher {
+    display: flex;
+    align-items: center;
+    background-color: #f0f1f2;
+    border-radius: 8px;
+    padding: 3px;
+    flex-shrink: 0; /* Không cho phép tab bị bóp nhỏ */
+}
+
+.tab-switcher span {
+        padding: 3px 27px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #707a8a;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.tab-switcher span.active {
+    background-color: #ffffff;
+    color: #1e2329;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        /* margin-left: -9px; */
+}
+
+/* Icon chuẩn */
+.icon-m {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0; /* Quan trọng: để icon không bị méo */
+    object-fit: contain;
+}
+
+/* Thông báo 99+ */
+.noti-badge {
+    position: relative;
+    display: flex;
+}
+
+.badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background-color: #fcd535;
+    color: #000;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 4px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+/* Thanh tìm kiếm bên dưới */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f0f1f2;
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    margin-left: 10px;
+    width: 100%;
+    outline: none;
+    font-size: 13px;
+}
+
+.icon-s {
+    width: 16px;
+    opacity: 0.5;
+}
+.search-bar input { border: none;
+    background: transparent;
+    width: 90%;
+    outline: none;
+    font-size: 14px;
+    margin-left: -4px; }
+
+/* Balance */
+.balance-section { padding: 20px 16px; }
+.balance-title { color: var(--text-gray); font-size: 13px; margin-bottom: 5px; }
+.balance-row { display: flex; justify-content: space-between; align-items: center; }
+.amount { font-size: 35px; font-weight: 620; }
+.amount span { font-size: 27px; }
+
+.deposit-btn {
+    background: var(--primary-yellow);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+      color: #111111 !important;
+    -webkit-text-fill-color: #111111 !important;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    text-decoration: none;
+}
+.pnl { font-size: 12px; margin-top: 5px; }
+.negative { color: var(--red); }
+.pnl-label {
+    position: relative;
+    display: inline-block;
+}
+
+/* gạch chấm bên dưới */
+.pnl-label::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -4px;
+
+    width: 100%;
+
+    border-bottom: 1px dotted #D6D9DE;
+}
+.pnl {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.pnl-arrow-icon {
+  font-size: 10px;
+  color: #8d8d8d;
+  font-weight: 900;
+
+  position: static;      /* quan trọng */
+  margin-left: 4px;
+  transform: translateY(1px);
+}
+.pnl-arrow-wrap {
+    position: absolute;
+    right: 128px;
+    top: 18px;
+    z-index: 20;
+}
+
+.pnl-arrow-icon {
+        font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 12px;
+    color: #8d8d8d;
+    position: relative;
+    /* margin-left: -1px; */
+   
+}
+
+/* Cards */
+.quick-cards {
+     display: grid; 
+    grid-template-columns: 1fr 1fr;
+     gap: 17px;
+      padding: 0 15px; }
+.card {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px;
+    background: #fff; /* màu card */
+}
+.card-header { font-size: 14px; color: var(--text-gray); display: flex; justify-content: space-between; margin-bottom: 5px; }
+.card p { font-size: 13px; font-weight: 500; margin-bottom: 8px; 
+color: var(--text-gray)}
+.card-icons { display: flex; gap: 20px; }
+.card-icon-item { text-align: center; font-size: 11px; }
+.card-icon-item img { width: 71px
+    ; display: block; margin: 0 auto 4px; }
+
+/* Gauge Placeholder */
+.gauge-container { text-align: center; position: relative; }
+.gauge-img {       max-width: 287px;
+    position: absolute;
+    /* margin-right: -48px; */
+    margin-left: -143px;
+    margin-top: -45px;}
+.gauge-value { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+.gauge-value .num { display: block; font-size: 18px; font-weight: 700; }
+.gauge-value .text { font-size: 10px; color: var(--text-gray); }
+
+/* Table */
+
+/* =========================
+   MARKET TABLE - BINANCE
+========================= */
+
+.asset-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin-top: 4px;
+}
+
+.asset-table th {
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    sans-serif;
+
+    font-size: 11px;
+    font-weight: 400;
+    color: #aeb4bd;
+
+    padding: 0 0 12px;
+    letter-spacing: -0.15px;
+}
+
+.asset-table td {
+    padding: 12px 0;
+    border: none;
+    vertical-align: middle;
+}
+
+/* ===== TÊN COIN ===== */
+.asset-table td:first-child strong {
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    sans-serif;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #1E2329;
+
+    letter-spacing: -0.25px;
+}
+
+/* /USDT */
+.pair {
+    font-size: 12px;
+    font-weight: 500;
+    color: #B8BEC8;
+
+    margin-left: 2px;
+
+    letter-spacing: -0.1px;
+}
+
+/* TAG VĨNH CỬU */
+.tag {
+    display: inline-flex;
+    align-items: center;
+
+    background: #F4F5F7;
+
+    color: #B7BDC6;
+
+    font-size: 9px;
+    font-weight: 500;
+
+    padding: 2px 5px;
+
+    border-radius: 4px;
+
+    margin-left: 4px;
+}
+
+/* ===== CỘT GIÁ ===== */
+.text-right {
+    text-align: right;
+}
+
+.asset-table td.text-right strong {
+    display: block;
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 620; /* mảnh hơn */
+
+    color: #1E2329;
+
+    letter-spacing: -0.45px;
+    line-height: 1.05;
+}
+
+/* GIÁ VND XÁM */
+.asset-table small {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 11px;
+    font-weight: 400;
+
+    color: #B7BDC6;
+
+    letter-spacing: -0.15px;
+}
+
+/* ===== % BUTTON ===== */
+.price-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 68px;
+    height: 31px;
+
+    border-radius: 6px;
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #fff;
+
+    letter-spacing: -0.2px;
+}
+
+.price-btn.up {
+    background: #2EBD85;
+}
+
+.price-btn.down {
+    background: #F6465D;
+}
+/* Bottom Nav */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 375px;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid var(--border-color);
+}
+.nav-item {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+.nav-item:active {
+    background: rgba(0,0,0,0.08);
+    border-radius: 10px;
+}
+.nav-item img { 
+    width: 78px;
+    margin-left: 7px;
+    margin-top: -28px;
+    display: block;
+    /* position: absolute; */
+    
+    }
+
+.nav-item span {
+        /* margin-top: -2px; */
+    /* position: absolute; */
+    top: 1px;
+}
+.nav-item.active { color: var(--text-main); }
+
+/* Utility Icons */
+.icon-m {
+     width: 100px;
+    height: 100px;
+    padding: 10px;
+     }
+.icon-s { width: 16px; height: 16px; }
+.icon-xs {
+   width: 56px;
+    height: 47px;
+    margin-right: -18px;
+    margin-top: -15px;
+     }
+.footer-nav {
+    position: absolute;
+    left: 216px;
+    right: 0;
+    bottom: 0;
+
+    height: 82px;
+    background: #fff;
+
+    display: flex;
+    justify-content: space-around;
+
+    border-top: 1px solid #f2f2f2;
+}
+
+.footer-item {
+    width: 20%;
+    position: relative;
+    text-align: center;
+}
+
+/* ===== ICON TÁCH RIÊNG ===== */
+.footer-icon {
+    position: absolute;
+
+    top: 8px;   /* chỉnh icon lên xuống */
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.footer-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* ===== CHỮ TÁCH RIÊNG ===== */
+.footer-text {
+    position: absolute;
+
+    top: 46px; /* chỉnh chữ lên xuống */
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    white-space: nowrap;
+
+    font-size: 10px;
+    font-weight: 450;
+    color: #8B8B8B;
+}
+/* item */
+.footer-item {
+    position: relative;
+    width: 20%;
+    height: 82px;
+}
+
+/* ===== ICON TRANG CHỦ RIÊNG ===== */
+.footer-home-icon {
+    position: absolute;
+
+    left: 50%;
+    top: 8px;
+
+    transform: translateX(-50%);
+}
+
+.footer-home-icon img {
+        width: 155px;
+    height: 104px;
+    object-fit: contain;
+    margin-top: -34px;
+}
+
+/* ===== CHỮ TRANG CHỦ RIÊNG ===== */
+.footer-home-text {
+    position: absolute;
+
+    left: 50%;
+    top: 48px;
+
+    transform: translateX(-50%);
+
+    font-size: 12px; /* chỉnh chữ */
+    font-weight: 450;
+
+    color: #8B8B8B;
+
+    white-space: nowrap;
+}
+
+.bottom-sub-tabs {
+    position: fixed;
+    left: 50%;
+    bottom: 76px;
+    transform: translateX(-50%);
+
+    width: 100%;
+    max-width: 430px;
+    height: 44px;
+
+    background: #fff;
+
+    border-top: 1px solid #f2f2f2;
+
+    z-index: 9998;
+}
+
+/* giữ nguyên khám phá */
+.tab-discover {
+    position: absolute;
+    left: 20px;
+    top: 12px;
+
+    font-size: 15px;
+    font-weight: 650;
+    color: #1E2329;
+}
+
+/* tách riêng theo dõi */
+.tab-follow {
+    position: absolute;
+    left: 100px; /* chỉnh riêng */
+
+    top: 12px;
+
+    font-size: 15px;
+    font-weight: 560;
+    color: #8D8D8D;
+}
+
+/* tách riêng chiến dịch */
+.tab-campaign {
+    position: absolute;
+    left: 214px; /* chỉnh riêng */
+
+    top: 12px;
+
+    font-size: 15px;
+    font-weight: 560;
+    color: #8D8D8D;
+}
+
+/* tách riêng đồng tiền */
+.tab-coin {
+    position: absolute;
+    right: 66px; /* chỉnh riêng */
+
+    top: 12px;
+
+    font-size: 15px;
+    font-weight: 560;
+    color: #8D8D8D;
+}
+/* khám phá giữ nguyên */
+.tab-discover {
+    position: absolute;
+    left: 18px;
+    top: 12px;
+
+    font-size: 15px;
+    font-weight: 650;
+    color: #1E2329;
+}
+
+/* nhóm 3 tab chung */
+.tab-group {
+    position: absolute;
+
+    left: 140px; /* CHỈNH CẢ 3 CÙNG LÚC */
+    top: 12px;
+
+    display: flex;
+    gap: 26px; /* khoảng cách giữa 3 chữ */
+}
+
+/* style chung */
+.tab-group span {
+    font-size: 15px;
+    font-weight: 560;
+    color: #8D8D8D;
+    white-space: nowrap;
+}
+
+.floating-ai {
+    position: fixed;
+    bottom: 90px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    margin-top: 26px;
+}
+
+.floating-ai img {
+    width: 110px;
+    height: auto;
+    display: block;
+    /* margin-top: 53px; */
+}
+
+.bottom-sub-tabs span {
+    /* font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "Helvetica Neue",
+    sans-serif; */
+
+    font-size: 15px;
+
+    font-weight: 560; /* độ đậm tab thường */
+
+    letter-spacing: -0.35px;
+
+    color: #8D8D8D;
+
+    white-space: nowrap;
+
+    line-height: 1;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* tab active */
+.bottom-sub-tabs span.active {
+    color: #1E2329;
+
+    font-weight: 550; /* đậm hơn 1 chút */
+    letter-spacing: 0.55px;
+    margin-left: -3px;
+}
+.footer-nav {
+    position: fixed;
+    left: 216px;
+    right: 0;
+    bottom: 0;
+
+    height: 82px;
+    background: #fff;
+
+    display: flex;
+    justify-content: space-around;
+
+    border-top: 1px solid #f2f2f2;
+}
+
+.footer-item {
+    width: 20%;
+    position: relative;
+    text-align: center;
+}
+
+/* ===== ICON TÁCH RIÊNG ===== */
+.footer-icon {
+    position: absolute;
+
+    top: 8px;   /* chỉnh icon lên xuống */
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.footer-icon img {
+       width: 80px;
+    height: 90px;
+    margin-top: -24px;
+    object-fit: contain;
+}
+
+/* ===== CHỮ TÁCH RIÊNG ===== */
+.footer-text {
+        position: absolute;
+    top: 49px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 450;
+    color: #8B8B8B;
+}
+.footer-item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: background 0.15s ease;
+}
+
+.footer-click {
+    padding: 8px 10px;
+    border-radius: 14px;
+
+    transition: background .15s ease;
+}
+
+
+/* hiệu ứng khi click giữ */
+
+
+/* riêng tab active */
+
+.footer-item.active .footer-text {
+    /* color: #111; */
+}
+.market-card {
+  background: #fff;
+  margin: 10px 15px 0;
+  border-radius: 14px;
+  padding: 13px 13px 8px;
+  overflow: hidden;
+}
+
+.market-tabs {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  white-space: nowrap;
+  margin-bottom: 14px;
+}
+
+.market-tabs .tab {
+  /* font-size: 14px; */
+  font-weight: 500;
+  color: #8b8f97;
+}
+
+.market-tabs .tab.active {
+  color: #1e2329;
+  font-weight: 645;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+
+.filter-bar span {
+  font-size: 14px;
+    color: #6c6d6f;
+    
+}
+
+.filter-bar span.active {
+  color:#212325;
+}
+
+.asset-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+/* riêng phần tên */
+.th-name {
+    position: relative;
+
+   
+
+    text-align: left;
+
+    font-size: 11px;
+    font-weight: 400;
+    color: #B7BDC6;
+}
+
+/* giá gần nhất */
+.th-price {
+    position: relative;
+
+    left: -6px; /* chỉnh riêng */
+
+    text-align: right;
+}
+
+/* thay đổi 24h */
+.th-change {
+    position: relative;
+
+    right: 2px; /* chỉnh riêng */
+
+    text-align: right;
+}
+.asset-table th {
+  font-size: 12px;
+  font-weight: 400;
+  color: #aeb4bd;
+  padding: 0 0 10px;
+}
+
+.asset-table td {
+  padding: 9px 0;
+  vertical-align: middle;
+  border: none;
+}
+.asset-table td {
+  padding: 10px 0;
+}
+
+.asset-table td:first-child strong {
+  font-size: 13px;
+  font-weight: 550;
+  color: #1e2329;
+  letter-spacing: -0.25px;
+}
+
+.tag {
+  font-size: 8px;
+  font-weight: 400;
+  color: #9da3ad;
+  background: #f1f2f4;
+  padding: 1px 4px;
+  border-radius: 3px;
+  margin-left: 3px;
+}
+
+.asset-table td.text-right strong {
+  font-size: 14px;
+  font-weight: 550;
+  color: #1e2329;
+  letter-spacing: -0.35px;
+  line-height: 1;
+}
+
+.asset-table small {
+  font-size: 10px;
+  font-weight: 400;
+  color: #b7bdc6;
+  letter-spacing: -0.15px;
+  margin-top: 2px;
+}
+
+.price-btn {
+  min-width: 66px;
+  height: 28px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.asset-table td:first-child {
+  font-size: 13px;
+  color: #1e2329;
+}
+
+/* tên coin */
+.asset-table td:first-child strong {
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.2px; /* tăng khoảng cách chữ */
+}
+
+/* số giá */
+.asset-table td.text-right strong {
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 0.25px; /* số cách ra */
+    line-height: 1;
+}
+
+/* số nhỏ dưới */
+.asset-table small {
+    font-size: 10px;
+    color: #b7bdc6;
+
+    letter-spacing: 0.15px;
+}
+
+/* BTC /USDT */
+.pair {
+    letter-spacing: 0.1px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.asset-table td.text-right strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e2329;
+  line-height: 1.15;
+}
+
+.asset-table small {
+  display: block;
+  font-size: 12px;
+  color: #aeb4bd;
+  margin-top: 2px;
+}
+
+.tag {
+  display: inline-block;
+  background: #f1f2f4;
+  color: #a0a6af;
+  font-size: 9px;
+  font-weight: 500;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+.pair {
+  color: #a4a9b2;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.price-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 70px;
+  height: 28px;
+
+  border-radius: 5px;
+
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.price-btn.up {
+  background: #2ebd85;
+}
+
+.price-btn.down {
+  background: #f6465d;
+}
+.icon-xss{
+    width: 10px;
+    height: 10px;
+}.balance-title {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 400;
+    color: #1e2329;
+}
+
+.balance-arrow {
+    width: 7px;
+    height: 7px;
+    border-left: 2px solid #89929d;
+    border-top: 2px solid #89929d;
+    transform: rotate(45deg);
+    margin-left: 8px;
+    margin-top: 5px;
+}
+.footer-nav {
+   position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    /* bottom: 6px; */
+    width: 114%;
+    max-width: 430px;
+    height: 82px;
+}
+/* chung */
+.card-text {
+    font-size: 11px; /* to nhỏ */
+    font-weight: 500; /* đậm nhạt */
+
+    color: #1E2329;
+
+    letter-spacing: -0.1px;
+}
+
+/* riêng P2P */
+.p2p-text {
+    font-size: 13px;
+    /* margin-top: 19px; */
+    position: relative;
+    top: -15px;
+}
+
+/* riêng Tìm ưu đãi */
+.uu-dai-text {
+    font-size: 13px;
+    /* margin-top: 19px; */
+    position: relative;
+    top: -15px;
+}
+/* TẮT highlight xanh khi click mobile */
+.footer-item,
+.footer-item * {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* tắt active */
+.footer-item:active,
+.footer-item.active:active {
+    background: transparent !important;
+}
+
+/* tắt selection */
+.footer-item {
+    user-select: none;
+    outline: none;
+}
