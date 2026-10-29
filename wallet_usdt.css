@@ -1,0 +1,582 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  color: #1e2329;
+}
+
+.app {
+  width: 100%;
+  max-width: 428px;
+  min-height: 926px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 82px;
+}
+
+/* Header */
+.header {
+  height: 96px;
+  position: relative;
+}
+
+.back-icon {
+  position: absolute;
+  left: 5px;
+  top: 65px;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.coin-title {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.title-coin-icon {
+       margin-left: -91px;
+    margin-top: -34px;
+    width: 150px;
+    height: 140px;
+    position: absolute;
+    object-fit: contain;
+}
+
+.coin-title span {
+     font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.25px;
+    margin-top: -40px;
+    margin-left: 13px;
+    position: relative;
+}
+
+/* Balance */
+.balance {
+margin-top: -20px;
+    padding: 1px 15px 28px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.balance-label {
+  display: flex;
+    align-items: center;
+    color: #1e2329;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: -0.1px;
+}
+
+.eye-icon {
+     width: 86px;
+    height: 68px;
+    object-fit: contain;
+    position: absolute;
+    margin-left: 125px;
+    margin-top: -8px;
+}
+
+.balance h1 {
+  margin-top: 6px;
+  font-size: 34px;
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: -0.9px;
+  color: #000;
+  font-variant-numeric: tabular-nums;
+}
+
+.balance p {
+     margin-top: -26px;
+    margin-left: 220px;
+    color: #676769;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/* Sections */
+.allocation,
+.trade,
+.recommend,
+.history {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.allocation {
+  padding-top: 15px;
+}
+
+.allocation h2,
+.section-head h2,
+.recommend h2,
+.history h2 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+}
+
+/* Allocation */
+.allocation-row {
+display: grid;
+    grid-template-columns: 45px 1fr 135px;
+    align-items: center;
+    min-height: 65px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.circle {
+ width: 36px;
+    height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6f7782;
+  font-size: 9px;
+  background: #fff;
+}
+
+.circle.blue {
+  border: 4px solid #2474e8;
+}
+
+.circle.small {
+  border: 1px solid #f1f1f1;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  position: relative;
+}
+
+.circle.small::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  width: 4px;
+  height: 4px;
+  background: #fcd535;
+  border-radius: 50%;
+}
+
+.allocation-name {
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: -0.2px;
+  
+}
+
+.allocation-value {
+  text-align: right;
+}
+
+.allocation-value strong {
+  display: block;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.allocation-value span {
+  display: block;
+  margin-top: 4px;
+  color: #8b8f98;
+    font-size: 14px;
+}
+
+/* Trade */
+.trade {
+  padding-top: 22px;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-head span {
+  color: #9aa0a8;
+ font-size: 28px;
+  line-height: 1;
+}
+
+.trade-cards {
+  margin-top: 13px;
+  display: flex;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.trade-card {
+    width: 127px;
+    height: 98px;
+    border-radius: 16px;
+    background: #f8f8f8;
+    padding: 14px 16px;
+    position: relative;
+    flex-shrink: 0;
+    border: 1px solid #f5f5f5;
+}
+
+.pair {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.pair span {
+  color: #8b8f98;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.trade-card strong {
+  display: block;
+  margin-top: 25px;
+  font-size: 17px;
+  font-weight: 650;
+  letter-spacing: -0.25px;
+}
+
+.trade-card p {
+  margin-top: 3px;
+  font-size: 13px;
+}
+
+.green { color: #16c784; }
+.red { color: #f6465d; }
+
+.tag {
+  position: absolute;
+  right: 3px;
+  top: 0;
+  background: #fff5d6;
+  color: #d59b00;
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 0 10px 0 10px;
+}
+
+/* Recommend */
+.recommend {
+  padding-top: 25px;
+}
+
+.recommend-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+
+.recommend-card {
+    height: 110px;
+    border-radius: 16px;
+    background: #f8f8f8;
+    padding: 18px 18px;
+    position: relative;
+    border: 1px solid #f5f5f5;
+}
+
+.recommend-card p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.42;
+  margin-left: -10px;
+  letter-spacing: -0.2px;
+}
+
+.recommend-card b {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: #d59b00;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.recommend-card img {
+ position: absolute;
+    right: 4px;
+    bottom: 9px;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* History */
+.history {
+  padding-top: 28px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 4px;
+}
+
+.history-item strong {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.history-item p {
+  margin-top: 6px;
+  color: #8b8f98;
+  font-size: 15px;
+}
+
+.history-item span {
+  color: #16c784;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* AI */
+.ai-button {
+  position: fixed;
+  right: calc(50% - 193px);
+  bottom: 100px;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,.12);
+  font-size: 21px;
+}
+
+/* Bottom buttons */
+.bottom-action {
+  position: fixed;
+  left: 50%;
+  bottom: 31px;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 428px;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  background: #fff;
+}
+
+.bottom-action button {
+    height: 46px;
+    border: none;
+    border-radius: 12px;
+    background: #efefef;
+    color: #111;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* nút vàng */
+.bottom-action .yellow {
+    background: #fcd535;
+}
+
+.bottom-action::after {
+  content: "";
+  position: fixed;
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%);
+  width: 145px;
+  height: 5px;
+  border-radius: 999px;
+  background: #000;
+}
+.floating-ai {
+    position: fixed;
+    bottom: 160px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.floating-ai img { width: 110px; }
+.deposit-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.25s ease;
+}
+
+.deposit-sheet.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.deposit-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.58);
+}
+
+.deposit-content {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(100%);
+
+  width: 100%;
+  max-width: 440px;
+  background: #fff;
+
+  border-radius: 18px 18px 0 0;
+  padding: 9px 14px 30px;
+
+  transition: 0.28s ease;
+}
+
+.deposit-sheet.active .deposit-content {
+  transform: translateX(-50%) translateY(0);
+}
+
+.sheet-handle {
+  width: 38px;
+  height: 4px;
+  border-radius: 99px;
+  background: #d8dbe0;
+  margin: 0 auto 22px;
+}
+
+.deposit-content h2 {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  margin-bottom: 14px;
+}
+
+.deposit-option {
+  min-height: 72px;
+  border: 1px solid #eeeeee;
+  border-radius: 11px;
+
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  align-items: center;
+  column-gap: 8px;
+
+  padding: 12px 14px;
+  margin-bottom: 10px;
+
+  background: #fff;
+}
+
+.deposit-icon {
+  width: 38px;
+  text-align: center;
+  font-size: 25px;
+  color: #111;
+  line-height: 1;
+}
+
+.deposit-option h3 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  margin-bottom: 5px;
+}
+
+.deposit-option p {
+  font-size: 12px;
+    color: #8b8f98;
+    line-height: 1.35;
+    letter-spacing: -0.1px;
+}
+/* img chung */
+.deposit-img {
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* chỉnh từng icon riêng */
+.deposit-crypto-icon {
+     width: 36px;
+    height: 30px;
+    margin-left: -4px;
+        margin-top: -4px;
+}
+
+.binance-pay-icon {
+      width: 36px;
+    height: 34px;
+        margin-left: -4px;
+            margin-top: -4px;
+}
+
+.p2p-icon {
+      width: 31px;
+    height: 28px;
+       margin-left: -4px;
+           margin-top: -4px;
+}
+.icon-back{
+   position: absolute;
+    left: -15px;
+    top: -20px;
+    width: 80px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    z-index: 9999;
+}
+
+.buy-vnd-icon {
+  width: 36px;
+    height: 34px;
+      margin-left: -4px;
+          margin-top: -4px;
+}
+.deposit-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.deposit-text{
+      margin-left: -3px;
+}
+.network-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.network-sheet.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.network-content {
+  transform: translateX(-50%) translateY(100%);
+}
+
+.network-sheet.active .network-content {
+  transform: translateX(-50%) translateY(0);
+}

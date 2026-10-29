@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  color: #1e2329;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 428px;
+  min-height: 926px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  height: 58px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1 {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.icon-back {
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 74px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.icon-support {
+  position: absolute;
+  right: -28px;
+  top: -32px;
+  width: 126px;
+  height: 126px;
+  object-fit: contain;
+}
+
+/* Summary */
+.summary {
+  text-align: center;
+  padding: 20px 18px 25px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.summary .amount {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 650;
+  letter-spacing: -0.4px;
+  margin-bottom: 16px;
+  color: #050505;
+}
+
+.status {
+  position: relative;
+  height: 24px;
+  margin-bottom: 8px;
+}
+
+.status-icon {
+    position: absolute;
+    left: 51%;
+    top: 42%;
+    width: 72px;
+    height: 66px;
+    transform: translate(-78px, -50%);
+    object-fit: contain;
+}
+
+.status-text {
+  color: #21b77a;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+      margin-left: 22px;
+}
+
+.summary p {
+      margin: 0 auto;
+    color: #8c9098;
+    font-size: 12px;
+    line-height: 1.35;
+    letter-spacing: -0.2px;
+}
+
+.summary .p1 {
+     margin-top: 8px;
+    color: #d9a518;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Details */
+.details {
+  padding: 30px 18px 0;
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 41px;
+  margin-bottom: 18px;
+  align-items: start;
+}
+
+.detail-row span {
+  color: #8a8f98;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.detail-row strong {
+  color: #1e2329;
+  text-align: right;
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.12px;
+}
+
+.detail-value {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.value-stack {
+  text-align: right;
+}
+
+.break-text {
+  word-break: break-all;
+}
+
+.save-address {
+  display: block;
+  margin-top: 5px;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 500;
+  color: #d59b00;
+}
+
+/* Copy icon */
+.copy-icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  flex-shrink: 0;
+  margin-left: 5px;
+  margin-top: 1px;
+}
+
+.copy-icon::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 0;
+  left: 6px;
+  border: 1.6px solid #aeb4bc;
+  border-radius: 1px;
+}
+
+.copy-icon::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 4px;
+  left: 2px;
+  border: 1.6px solid #aeb4bc;
+  border-radius: 1px;
+  background: #fff;
+}
+
+/* Report */
+.report-row {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  color: #7d8794;
+  font-size: 13px;
+  font-weight: 400;
+}
+.txid-text {
+  text-decoration-line: underline;
+  text-decoration-color: #1e2329;
+  text-decoration-thickness: 1.2px;
+  text-underline-offset: 3px;
+  line-height: 1.55;
+}
+.report-icon {
+  font-size: 14px;
+}
+
+/* Bottom button */
+.footer-action {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 428px;
+  padding: 0 16px;
+}
+
+.btn-main {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 7px;
+  background: #fcd535;
+  color: #111;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Home bar */
+.footer-action::after {
+  content: "";
+  position: fixed;
+  left: 50%;
+  bottom: -22px;
+  transform: translateX(-50%);
+  width: 145px;
+  height: 5px;
+  border-radius: 10px;
+  background: #000;
+}
+.floating-ai {
+    position: fixed;
+    bottom: 120px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.floating-ai img { width: 110px; }
+.report-row {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+/* KHUNG CỐ ĐỊNH */
+.report-icon-box {
+  width: 16px;
+  height: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+/* IMG RIÊNG */
+.report-icon {
+      width: 100px;
+    height: 69px;
+    object-fit: contain;
+    opacity: 0.78;
+    margin-left: -11px;
+    margin-top: -5px;
+}
+
+/* text riêng */
+.report-text {
+  color: #5d5f64;
+  font-size: 13.5px;
+  font-weight: 400;
+  line-height: 1;
+}

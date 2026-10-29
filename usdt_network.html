@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+ <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    >
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- iPhone/iPad -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="default"
+    >
+    <meta name="apple-mobile-web-app-title" content="Binance Demo">
+
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="./img/images/apple-touch-icon-180.png"
+>
+
+    <title>Binance Demo</title>
+      <link rel="stylesheet" href="./global.css">
+  <link rel="stylesheet" href="usdt_network.css" />
+</head>
+<body>
+  <div class="app-container">
+  <a
+      href="./usdt_network.html?openNetwork=true"
+      class="bsc-header-control bsc-back"
+      aria-label="Quay về chọn mạng lưới"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M20 12H4M11 5l-7 7 7 7"/>
+      </svg>
+    </a>
+    <header class="header">
+      <img src="img/images/arrow_left.png" class="icon-back" onclick="history.back()" alt="back">
+
+      <h1>Nạp USDT</h1>
+
+      <div class="header-icons">
+        <img src="img/images/help.png" class="icon-help" alt="help">
+        <img src="img/images/history.png" class="icon-history" alt="history">
+      </div>
+    </header>
+
+    <section class="hero">
+      <img src="img/images/deposit-network.png" class="hero-img" alt="network">
+    </section>
+
+   <section class="network-section" id="openNetworkSheet">
+  <div class="network-text">
+    <span>Mạng lưới</span>
+    <strong>Trước tiên, vui lòng chọn mạng.</strong>
+  </div>
+
+  <button class="network-btn">
+    <img src="img/images/swap.png" alt="swap">
+  </button>
+</section>
+
+    <button class="ai-button">
+      <img src="img/images/AI.png" alt="AI">
+    </button>
+
+  </div>
+  <div class="network-sheet" id="networkSheet">
+  <div class="network-overlay" id="networkOverlay"></div>
+
+  <div class="network-content">
+    <div class="network-handle"></div>
+  <a
+      href="./wallet_usdt.html"
+      class="bsc-header-control bsc-back"
+      aria-label="Quay về chọn mạng lưới"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M20 12H4M11 5l-7 7 7 7"/>
+      </svg>
+    </a>
+    <h2>Chọn mạng lưới</h2>
+    <h3>Xin lưu ý, chỉ các mạng được hỗ trợ trên nền tảng Binance mới hiển thị. Nếu
+      bạn gửi tiền qua mạng khác, tài sản của bạn có thể bị mất
+    </h3>
+
+
+<a class="network-card bsc-card"
+   href="./network_bsc.html">
+
+  <div class="network-title">
+    <div class="nav-item1">
+      <img src="img/images/BSC.png" alt="BSC">
+    </div>
+
+    <div class="network-info">
+      <strong class="network-name">BSC</strong>
+      <span class="network-description">
+        BNB Smart Chain (BEP20)
+      </span>
+    </div>
+  </div>
+
+  <p>Khoản tiền nạp tối thiểu &gt;0,01 USDT</p>
+  <p>Ước tính thời gian đến ≈ 1 phút</p>
+
+</a>
+
+
+   <div class="network-card trx-card"
+     onclick="window.location.href='network_trx.html'">
+
+  <div class="network-title">
+       <a href="#" class="nav-item2">
+            <img src="img/images/TRX.png">
+            
+        </a>
+    <strong>TRX</strong>
+    <span>Tron (TRC20)</span>
+  </div>
+
+  <p>Khoản tiền nạp tối thiểu &gt;0,01 USDT</p>
+  <p>Ước tính thời gian đến ≈ 1 phút</p>
+</div>
+
+    <div class="network-card">
+      <div class="network-title">
+           <a href="#" class="nav-item3">
+            <img src="img/images/POL.png">
+            
+        </a>
+        <strong>POL</strong>
+        <span>Polygon POS</span>
+      </div>
+
+     
+
+      <p>Khoản tiền nạp tối thiểu &gt;0,02 USDT</p>
+      <p>Ước tính thời gian đến ≈ 1 phút</p>
+    </div>
+
+    <div class="network-card">
+      <div class="network-title">
+           <a href="#" class="nav-item4">
+            <img src="img/images/ETH1.png">
+            
+        </a>
+        <strong>ETH</strong>
+        <span>Ethereum (ERC20)</span>
+      </div>
+
+
+      <p>6 lượt xác nhận block/giây</p>
+      <p>Khoản tiền nạp tối thiểu &gt;0,001 USDT</p>
+      <p>Ước tính thời gian đến ≈ 2 phút</p>
+    </div>
+
+   
+
+ <div class="network-card">
+      <div class="network-title">
+           <a href="#" class="nav-item6">
+            <img src="img/images/SOL1.png">
+            
+        </a>
+        <strong>SOL</strong>
+        <span>Solana</span>
+      </div>
+
+
+
+      <p>Khoản tiền nạp tối thiểu &gt;0,001 USDT</p>
+      <p>Ước tính thời gian đến ≈ 1 phút</p>
+    </div>
+
+    
+     <div class="network-card">
+       
+      <div class="network-title">
+          <a href="#" class="nav-item7">
+            <img src="img/images/APT.png">
+            
+        </a>
+
+        <strong>APT</strong>
+        <span>Aptos</span>
+      </div>
+
+
+
+    
+      <p>Khoản tiền nạp tối thiểu &gt;0,00001 USDT</p>
+      <p>Ước tính thời gian đến ≈ 1 phút</p>
+    </div>
+
+      <div class="network-card">
+       
+      <div class="network-title1">
+          <a href="#" class="nav-item8">
+            <img src="img/images/ARBITRUM.png">
+            
+        </a>
+
+        <strong>ARBITRUM</strong>
+        <span>Arbitrum One</span>
+      </div>
+
+
+
+    
+      <p>Khoản tiền nạp tối thiểu &gt;0,00001 USDT</p>
+      <p>Ước tính thời gian đến ≈ 1 phút</p>
+    </div>
+    <div class="network-warning">
+      <span class="warning-icon">!</span>
+      <p>
+        Xin lưu ý, chỉ các mạng được hỗ trợ trên nền tảng Binance mới hiển thị.
+        Nếu bạn gửi tiền qua mạng khác, tài sản của bạn có thể bị mất.
+      </p>
+    </div>
+  </div>
+</div>
+<script src="usdt_network.js"></script>
+
+</body>
+</html>

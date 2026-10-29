@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+   <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    >
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- iPhone/iPad -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="default"
+    >
+    <meta name="apple-mobile-web-app-title" content="Binance Demo">
+
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="./img/images/apple-touch-icon-180.png"
+>
+
+    <title>Binance Demo</title>
+      <link rel="stylesheet" href="./global.css">
+  <link rel="stylesheet" href="wallet_usdt.css" />
+</head>
+<body>
+  <div class="app">
+
+    <header class="header">
+   
+       <img src="img/images/arrow_left.png" class="icon-back" onclick="window.location.href='wallet.html'" alt="back">
+
+      <div class="coin-title">
+        <img src="img/images/usdt.png" class="title-coin-icon" alt="USDT">
+        <span>USDT</span>
+      </div>
+    </header>
+
+    <section class="balance">
+      <div class="balance-label">
+        Tổng giá trị dự kiến
+        <img src="img/images/eyetop.png" class="eye-icon" alt="">
+      </div>
+
+      <h1>175,05302107</h1>
+      <p>≈ 4.609.706,21 đ</p>
+    </section>
+
+    <section class="allocation">
+      <h2>Phân bổ</h2>
+
+      <div class="allocation-row">
+        <div class="circle blue">100%</div>
+        <div class="allocation-name">Funding</div>
+        <div class="allocation-value">
+          <strong>175,05</strong>
+          <span>≈ 4.609.626,66 đ</span>
+        </div>
+      </div>
+
+      <div class="allocation-row">
+        <div class="circle small">0%</div>
+        <div class="allocation-name">Spot</div>
+        <div class="allocation-value">
+          <strong>0,00302107</strong>
+          <span>≈ 79,55 đ</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="trade">
+      <div class="section-head">
+        <h2>Giao ngay</h2>
+        <span>›</span>
+      </div>
+
+      <div class="trade-cards">
+        <div class="trade-card">
+          <div class="pair">USDC<span>/USDT</span></div>
+          <div class="tag">Phổ biến</div>
+          <strong>1,00132</strong>
+          <p class="green">+0,01%</p>
+        </div>
+
+        <div class="trade-card">
+          <div class="pair">BTC<span>/USDT</span></div>
+          <strong>75.317,61</strong>
+          <p class="red">-0,97%</p>
+        </div>
+
+        <div class="trade-card">
+          <div class="pair">ETH<span>/USDT</span></div>
+          <strong>2.061,92</strong>
+          <p class="red">-0,63%</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="recommend">
+      <h2>Khuyến nghị</h2>
+
+      <div class="recommend-grid">
+        <div class="recommend-card">
+          <p>Kiếm APR trong USDT<br>lên đến 4,46%</p>
+          <b>Nhận ngay</b>
+          <img src="img/images/hand_coin.png" alt="">
+        </div>
+
+        <div class="recommend-card">
+          <p>Chuyển đổi USDT sang<br>tiền mã hóa khác</p>
+          <b>Chuyển đổi ngay</b>
+          <img src="img/images/convert_coin.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="history">
+      <h2>Lịch sử</h2>
+
+      <div class="history-item">
+        <div>
+          <strong>Nạp</strong>
+          <p>Pay</p>
+          <p>2026-05-16 20:17:06</p>
+        </div>
+        <span>+94,86</span>
+      </div>
+
+      <div class="history-item">
+        <div>
+          <strong>Nạp</strong>
+          <p>Pay</p>
+        </div>
+        <span>+94,86</span>
+      </div>
+    </section>
+
+      <!-- Floating Assistant Icon -->
+        <div class="floating-ai">
+            <img src="img/images/AI.png" alt="AI">
+        </div>
+
+
+    <footer class="bottom-action">
+     <button class="yellow" id="openDepositSheet">Thêm USDT</button>
+      <button>Gửi</button>
+      <button>Chuyển tiền</button>
+    </footer>
+
+  </div>
+  <div class="deposit-sheet" id="depositSheet">
+  <div class="deposit-overlay" id="depositOverlay"></div>
+
+  <div class="deposit-content">
+    <div class="sheet-handle"></div>
+
+    <h2>Chọn phương thức nạp tiền</h2>
+<div class="deposit-option"
+     onclick="window.location.href='usdt_network.html?openNetwork=true'">
+
+  <div class="deposit-icon-box">
+    <img
+      src="img/images/deposit-crypto.png"
+      class="deposit-img deposit-crypto-icon"
+      alt=""
+    >
+  </div>
+
+  <div class="deposit-text">
+    <h3>Nạp tài sản</h3>
+    <p>Nạp tiền mã hóa từ các sàn giao dịch/ ví khác sang Binance</p>
+  </div>
+</div>
+
+<div class="deposit-option">
+  <div class="deposit-icon-box">
+    <img src="img/images/binance-pay.png"
+         class="deposit-img binance-pay-icon"
+         alt="binance pay">
+  </div>
+
+  <div class="deposit-text">
+    <h3>Nhận qua Binance Pay</h3>
+    <p>Nhận tiền mã hóa từ những người dùng Binance khác</p>
+  </div>
+</div>
+
+<div class="deposit-option">
+  <div class="deposit-icon-box">
+    <img src="img/images/p2p-icon.png"
+         class="deposit-img p2p-icon"
+         alt="p2p">
+  </div>
+
+  <div class="deposit-text">
+    <h3>Giao dịch P2P</h3>
+    <p>Mua trực tiếp từ người dùng Binance. Thanh toán nội địa</p>
+  </div>
+</div>
+
+<div class="deposit-option">
+  <div class="deposit-icon-box">
+    <img src="img/images/buy-vnd.png"
+         class="deposit-img buy-vnd-icon"
+         alt="buy vnd">
+  </div>
+
+  <div class="deposit-text">
+    <h3>Mua với VND</h3>
+    <p>Mua tiền mã hóa dễ dàng qua chuyển khoản ngân hàng, thẻ và nhiều phương thức khác</p>
+  </div>
+</div>
+    
+
+  </div>
+</div>
+
+<script>
+  const openDepositSheet = document.getElementById("openDepositSheet");
+  const depositSheet = document.getElementById("depositSheet");
+  const depositOverlay = document.getElementById("depositOverlay");
+
+  openDepositSheet.addEventListener("click", () => {
+    depositSheet.classList.add("active");
+  });
+
+  depositOverlay.addEventListener("click", () => {
+    depositSheet.classList.remove("active");
+  });
+
+  const networkOverlay = document.getElementById("networkOverlay");
+
+  openNetworkSheet.addEventListener("click", function () {
+    networkSheet.classList.add("active");
+  });
+
+  networkOverlay.addEventListener("click", function () {
+    networkSheet.classList.remove("active");
+  });
+</script>
+
+</body>
+</html>

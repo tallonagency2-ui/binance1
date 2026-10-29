@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+ <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    >
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- iPhone/iPad -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="default"
+    >
+    <meta name="apple-mobile-web-app-title" content="Binance Demo">
+
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="./img/images/apple-touch-icon-180.png"
+>
+
+    <title>Binance Demo</title>
+      <link rel="stylesheet" href="./global.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #f8f9fa;
+    }
+    
+    .binance-yellow { background-color: #F0B90B; }
+    
+    .gauge {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: conic-gradient(#ef4444 0deg 135deg, #facc15 135deg 225deg, #22c55e 225deg 360deg);
+      position: relative;
+    }
+    
+    .gauge-inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 68px;
+      height: 68px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body class="max-w-[390px] mx-auto bg-white min-h-screen shadow-xl overflow-hidden">
+
+  <!-- Status Bar -->
+  <div class="h-11 bg-white flex items-end px-5 text-sm">
+    <div class="flex-1">21:27</div>
+    <div class="flex items-center gap-1.5">
+      <i class="fa-solid fa-signal"></i>
+      <i class="fa-solid fa-wifi"></i>
+      <span class="font-medium">100</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div class="bg-white px-4 py-3 flex items-center justify-between border-b">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center text-white text-xl shadow">
+        👤
+      </div>
+      <i class="fa-solid fa-bell text-2xl relative">
+        <span class="absolute -top-1 -right-1 bg-red-500 text-[10px] font-medium w-5 h-5 rounded-full flex items-center justify-center">99+</span>
+      </i>
+    </div>
+
+    <div class="flex bg-gray-100 rounded-2xl p-1 text-sm font-medium">
+      <button class="px-6 py-2 bg-white rounded-xl shadow">Sàn giao dịch</button>
+      <button class="px-6 py-2 text-gray-500">Ví</button>
+    </div>
+
+    <div class="flex gap-5 text-2xl">
+      <i class="fa-solid fa-qrcode"></i>
+      <i class="fa-solid fa-comment-dots"></i>
+    </div>
+  </div>
+
+  <!-- Search -->
+  <div class="px-4 py-3 bg-white border-b">
+    <div class="bg-gray-100 rounded-2xl px-4 py-3 flex items-center gap-3">
+      <span class="text-orange-500 text-xl">🔥</span>
+      <span class="flex-1 text-gray-700">POL Nội dung tìm kiếm nhiều</span>
+      <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+    </div>
+  </div>
+
+  <!-- Total Balance -->
+  <div class="bg-white px-4 pt-5 pb-4">
+    <p class="text-sm text-gray-500">Tổng giá trị dự kiến (VND)</p>
+    <div class="flex items-end justify-between mt-2">
+      <p class="text-[28px] leading-none font-bold">9.047.510,47 <span class="text-2xl">₫</span></p>
+      <button class="binance-yellow px-6 py-3 rounded-2xl font-semibold text-sm shadow-sm active:scale-95">
+        Nạp tiền
+      </button>
+    </div>
+    <p class="text-emerald-500 text-sm mt-3">
+      PNL hôm nay <span class="font-semibold">+33.629,47 ₫ (+0,37%)</span>
+    </p>
+  </div>
+
+  <!-- Pizza Day -->
+  <div class="mx-4 mt-3 bg-white rounded-3xl p-4 shadow border">
+    <div class="flex gap-4">
+      <div class="text-4xl">🍕</div>
+      <div class="flex-1">
+        <p class="font-semibold">Pizza Day</p>
+        <p class="text-sm text-gray-600 mt-1 leading-tight">
+          Tạo nhóm, mua $100 BTC và hoàn<br>50 USDC
+        </p>
+      </div>
+      <button class="text-sm font-medium bg-gray-100 px-5 rounded-xl whitespace-nowrap h-fit">
+        Đăng Ký
+      </button>
+    </div>
+  </div>
+
+  <!-- P2P + Fear & Greed -->
+  <div class="grid grid-cols-2 gap-4 px-4 mt-4">
+    <!-- P2P -->
+    <div class="bg-white rounded-3xl p-5">
+      <div class="flex justify-between">
+        <p class="font-semibold">Lệnh P2P</p>
+        <i class="fa-solid fa-chevron-right text-gray-400"></i>
+      </div>
+      <p class="text-sm text-gray-600 mt-1">Mua/Bán tiền mã hóa<br>với VND</p>
+      
+      <div class="flex gap-8 mt-8">
+        <div class="text-center">
+          <div class="w-12 h-12 bg-gray-100 rounded-2xl flex items-center justify-center text-3xl mx-auto">👥</div>
+          <p class="text-xs mt-3">P2P</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-gray-100 rounded-2xl flex items-center justify-center text-3xl mx-auto">🔍</div>
+          <p class="text-xs mt-3">Tìm ưu đãi</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fear & Greed -->
+    <div class="bg-white rounded-3xl p-5 flex flex-col items-center">
+      <div class="flex justify-between w-full">
+        <p class="font-semibold text-sm">Sợ hãi và tham lam</p>
+        <i class="fa-solid fa-chevron-right text-gray-400"></i>
+      </div>
+      
+      <div class="mt-6 relative">
+        <div class="gauge mx-auto"></div>
+        <div class="gauge-inner">
+          <div class="text-4xl font-bold text-center">39</div>
+          <div class="text-red-500 text-xs font-medium -mt-1">Sợ hãi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Market List -->
+  <div class="mt-6 px-4">
+    <div class="flex gap-6 text-sm font-medium border-b pb-3">
+      <span class="border-b-2 border-black pb-3">Danh sách yêu thích</span>
+      <span class="text-gray-400">Phổ biến</span>
+      <span class="text-gray-400">Alpha</span>
+      <span class="text-gray-400">Mới</span>
+    </div>
+
+    <div class="mt-4 space-y-5">
+      <div class="flex justify-between items-center">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-semibold">XAGUSDT</span>
+            <span class="text-[10px] bg-gray-100 px-2 py-px rounded">Vĩnh cửu</span>
+          </div>
+        </div>
+        <div class="text-right">
+          <div class="font-semibold">75,77</div>
+          <div class="text-xs text-gray-500">1.998.164,7665 ₫</div>
+        </div>
+        <div class="bg-emerald-500 text-white text-sm font-medium px-5 py-1 rounded-2xl">+2,05%</div>
+      </div>
+
+      <div class="flex justify-between items-center">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-semibold">XAUUSDT</span>
+            <span class="text-[10px] bg-gray-100 px-2 py-px rounded">Vĩnh cửu</span>
+          </div>
+        </div>
+        <div class="text-right">
+          <div class="font-semibold">4.506,55</div>
+          <div class="text-xs text-gray-500">118.844.257,99 ₫</div>
+        </div>
+        <div class="bg-emerald-500 text-white text-sm font-medium px-5 py-1 rounded-2xl">+0,26%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <div class="fixed bottom-0 left-1/2 -translate-x-1/2 max-w-[390px] w-full bg-white border-t py-2">
+    <div class="flex justify-around text-[10px]">
+      <div class="flex flex-col items-center text-blue-600">
+        <i class="fa-solid fa-house text-2xl"></i>
+        <span class="mt-1">Trang chủ</span>
+      </div>
+      <div class="flex flex-col items-center text-gray-500">
+        <i class="fa-solid fa-chart-line text-2xl"></i>
+        <span class="mt-1">Thị trường</span>
+      </div>
+      <div class="flex flex-col items-center text-gray-500">
+        <i class="fa-solid fa-arrow-right-arrow-left text-2xl"></i>
+        <span class="mt-1">Giao dịch</span>
+      </div>
+      <div class="flex flex-col items-center text-gray-500">
+        <i class="fa-solid fa-file text-2xl"></i>
+        <span class="mt-1">HĐTL</span>
+      </div>
+      <div class="flex flex-col items-center text-gray-500">
+        <i class="fa-solid fa-wallet text-2xl"></i>
+        <span class="mt-1">Tài sản</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
